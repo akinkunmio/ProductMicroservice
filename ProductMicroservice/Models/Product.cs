@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProductMicroservice.Models
 {
@@ -7,7 +8,6 @@ namespace ProductMicroservice.Models
         public int ProductId { get; set; }
         [Required, StringLength(100)]
         public string ProductName { get; set; } = string.Empty;
-        [Required]
         public string Description { get; set; } = string.Empty;
 
         public int? CategoryID { get; set; } 
@@ -17,5 +17,6 @@ namespace ProductMicroservice.Models
         public string? ImageBase64 { get; set; } = string.Empty;
 
         public double? UnitPrice { get; set; }
+        public int Status { get; set; }
     }
 }

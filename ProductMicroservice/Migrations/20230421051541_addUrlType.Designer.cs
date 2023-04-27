@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProductMicroservice.Data;
 
@@ -11,9 +12,11 @@ using ProductMicroservice.Data;
 namespace ProductMicroservice.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230421051541_addUrlType")]
+    partial class addUrlType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -96,9 +99,6 @@ namespace ProductMicroservice.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
-
                     b.Property<double?>("UnitPrice")
                         .HasColumnType("float");
 
@@ -115,7 +115,6 @@ namespace ProductMicroservice.Migrations
                             Description = "",
                             ImageBase64 = "nft1.webp",
                             ProductName = "nft1",
-                            Status = 0,
                             UnitPrice = 20.0
                         },
                         new
@@ -126,7 +125,6 @@ namespace ProductMicroservice.Migrations
                             Description = "",
                             ImageBase64 = "nft2.webp",
                             ProductName = "nft2",
-                            Status = 0,
                             UnitPrice = 50.0
                         },
                         new
@@ -137,7 +135,6 @@ namespace ProductMicroservice.Migrations
                             Description = "",
                             ImageBase64 = "nft3.webp",
                             ProductName = "nft3",
-                            Status = 0,
                             UnitPrice = 55.0
                         },
                         new
@@ -148,7 +145,6 @@ namespace ProductMicroservice.Migrations
                             Description = "",
                             ImageBase64 = "nft4.webp",
                             ProductName = "nft4",
-                            Status = 0,
                             UnitPrice = 30.0
                         },
                         new
@@ -159,7 +155,6 @@ namespace ProductMicroservice.Migrations
                             Description = "",
                             ImageBase64 = "nft5.webp",
                             ProductName = "nft5",
-                            Status = 0,
                             UnitPrice = 20.0
                         },
                         new
@@ -170,7 +165,6 @@ namespace ProductMicroservice.Migrations
                             Description = "",
                             ImageBase64 = "nft6.webp",
                             ProductName = "nft6",
-                            Status = 0,
                             UnitPrice = 10.0
                         },
                         new
@@ -181,7 +175,6 @@ namespace ProductMicroservice.Migrations
                             Description = "",
                             ImageBase64 = "nft7.webp",
                             ProductName = "nft7",
-                            Status = 0,
                             UnitPrice = 20.0
                         },
                         new
@@ -192,7 +185,6 @@ namespace ProductMicroservice.Migrations
                             Description = "",
                             ImageBase64 = "nft8.jpg",
                             ProductName = "nft8",
-                            Status = 0,
                             UnitPrice = 20.0
                         },
                         new
@@ -203,7 +195,6 @@ namespace ProductMicroservice.Migrations
                             Description = "",
                             ImageBase64 = "nft9.webp",
                             ProductName = "nft9",
-                            Status = 0,
                             UnitPrice = 25.0
                         },
                         new
@@ -214,7 +205,6 @@ namespace ProductMicroservice.Migrations
                             Description = "",
                             ImageBase64 = "nft10.webp",
                             ProductName = "nft10",
-                            Status = 0,
                             UnitPrice = 30.0
                         },
                         new
@@ -225,7 +215,6 @@ namespace ProductMicroservice.Migrations
                             Description = "",
                             ImageBase64 = "nft11.webp",
                             ProductName = "nft11",
-                            Status = 0,
                             UnitPrice = 40.0
                         },
                         new
@@ -236,7 +225,6 @@ namespace ProductMicroservice.Migrations
                             Description = "",
                             ImageBase64 = "nft12.webp",
                             ProductName = "nft12",
-                            Status = 0,
                             UnitPrice = 20.0
                         },
                         new
@@ -247,7 +235,6 @@ namespace ProductMicroservice.Migrations
                             Description = "",
                             ImageBase64 = "nft13.webp",
                             ProductName = "nft13",
-                            Status = 0,
                             UnitPrice = 30.0
                         },
                         new
@@ -258,7 +245,6 @@ namespace ProductMicroservice.Migrations
                             Description = "",
                             ImageBase64 = "nft14.webp",
                             ProductName = "nft14",
-                            Status = 0,
                             UnitPrice = 50.0
                         },
                         new
@@ -269,7 +255,6 @@ namespace ProductMicroservice.Migrations
                             Description = "",
                             ImageBase64 = "nft15.webp",
                             ProductName = "nft15",
-                            Status = 0,
                             UnitPrice = 20.0
                         },
                         new
@@ -280,7 +265,6 @@ namespace ProductMicroservice.Migrations
                             Description = "",
                             ImageBase64 = "nft16.webp",
                             ProductName = "nft16",
-                            Status = 0,
                             UnitPrice = 20.0
                         },
                         new
@@ -291,7 +275,6 @@ namespace ProductMicroservice.Migrations
                             Description = "",
                             ImageBase64 = "nft18.webp",
                             ProductName = "nft18",
-                            Status = 0,
                             UnitPrice = 20.0
                         },
                         new
@@ -302,7 +285,6 @@ namespace ProductMicroservice.Migrations
                             Description = "",
                             ImageBase64 = "nft19.webp",
                             ProductName = "nft19",
-                            Status = 0,
                             UnitPrice = 20.0
                         },
                         new
@@ -313,7 +295,6 @@ namespace ProductMicroservice.Migrations
                             Description = "",
                             ImageBase64 = "nft20.webp",
                             ProductName = "nft20",
-                            Status = 0,
                             UnitPrice = 20.0
                         },
                         new
@@ -324,7 +305,6 @@ namespace ProductMicroservice.Migrations
                             Description = "",
                             ImageBase64 = "nft21.webp",
                             ProductName = "nft21",
-                            Status = 0,
                             UnitPrice = 20.0
                         },
                         new
@@ -335,7 +315,6 @@ namespace ProductMicroservice.Migrations
                             Description = "",
                             ImageBase64 = "nft17.webp",
                             ProductName = "nft17",
-                            Status = 0,
                             UnitPrice = 28.0
                         });
                 });
